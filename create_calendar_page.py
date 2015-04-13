@@ -43,4 +43,4 @@ def create_calendar_page(month = None, year = None):
 	return s[:-1]
 
 
-print create_calendar_page()
+print create_calendar_page(7, 1996)
