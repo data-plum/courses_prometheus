@@ -42,4 +42,4 @@ conf2 = {'exam_max': 52,'lab_max': 8,'lab_num': 6,'k': 0.5}
 o5 = Student('Oleg', conf2)
 o5.make_lab(40).make_lab(7,5).make_lab(1).make_lab(7).make_lab(7).make_lab(7).make_lab(7,1)
 print o5.is_certified()
-
+o5.make_lab(7)

@@ -36,3 +36,9 @@ class Sphere(object):
 		else:
 			return False
 
+s2 = Sphere(2)
+print s2.get_center()
+print s2.get_radius()
+print s2.is_point_inside(0, 0.99, 0)
+print s2.is_point_inside(1.99, 0, 0)
+print s2.is_point_inside(0, 0, 2.99) 
