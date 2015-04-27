@@ -2,12 +2,17 @@ def find_fraction(summ):
 	def nod(numerator, denominator):
 		a = numerator
 	 	b = denominator
-	 	while a != b:
-	 		if a > b:
-	 			a = a - b
-	 		else:
-	 			b = b - a
-	 	return a
+	 	if (a % 2 == 0 and b % 2 == 0) or\
+	 	(a % 3 == 0 and b % 3 == 0) or\
+	 	(a % 5 == 0 and b % 5 == 0) or\
+	 	(a % 7 == 0 and b % 7 == 0):
+	 		return True
+	 	# while a != b:
+	 	# 	if a > b:
+	 	# 		a = a - b
+	 	# 	else:
+	 	# 		b = b - a
+	 	# return a
 
  	if summ <= 2:
  		return False
@@ -19,14 +24,15 @@ def find_fraction(summ):
 	 		numerator = summ // 2
 	 		denominator = numerator + 1
  	
-	 	if nod(numerator, denominator) == 1:
+	 	if not nod(numerator, denominator):
 	 		return (numerator, denominator)
 	 	else:
 	 		while numerator != 0:
 		 		numerator -= 1
 		 		denominator += 1
-			 	if nod(numerator, denominator) == 1:
+			 	if not nod(numerator, denominator):
 	 				return (numerator, denominator)
+	 				break
 		 		if numerator == 0:
 		 			return False
 
