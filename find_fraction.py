@@ -7,12 +7,6 @@ def find_fraction(summ):
 	 	(a % 5 == 0 and b % 5 == 0) or\
 	 	(a % 7 == 0 and b % 7 == 0):
 	 		return True
-	 	# while a != b:
-	 	# 	if a > b:
-	 	# 		a = a - b
-	 	# 	else:
-	 	# 		b = b - a
-	 	# return a
 
  	if summ <= 2:
  		return False
